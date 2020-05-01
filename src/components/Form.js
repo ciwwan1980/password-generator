@@ -34,7 +34,7 @@ const createPassword=(length)=>{
         let randomNumber= Math.floor(Math.random()*allCharacters.length)
         console.log("random....",randomNumber)
         
-        ourPassword=ourPassword + allCharacters[randomNumber]
+        ourPassword+=allCharacters[randomNumber]
         console.log("ourpassword........", ourPassword)
     }
     setPassword(ourPassword)
@@ -56,16 +56,16 @@ const createPassword=(length)=>{
             
             <label>
                 Passwordlength
-                <input name="passwordLength" value={passwordLength} />
+                <input name="passwordLength" value={passwordLength} onChange={(e)=>setPasswordLength(e.target.value)} />
             </label>
             
             <label>
-            <input type="checkbox" name="big" checked={big}  />
+            <input type="checkbox" name="big" checked={big} onChange={(e)=>setBig(!big)} />
                 useMixedCase
             </label>
             
             <label>
-                <input type="checkbox" name="special" checked={special} />
+                <input type="checkbox" name="special" checked={special} onChange={(e)=>setSpecial(!special)} />
                 specialCase
             </label>
     </fieldset>
