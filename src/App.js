@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import PassGenerator from "./components/PassGenerator"
-import 'materialize-css/dist/css/materialize.min.css';
+import Form from "./components/Form"
+
 
 function App() {
   return (
