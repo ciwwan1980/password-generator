@@ -41,13 +41,15 @@ const createPassword=(length)=>{
 }
 
     return (
-        <div>    
-    <form onSubmit={handleSubmit} className="flex">
+        <div className="wrapper">    
+    <form onSubmit={handleSubmit} className="form-wrapper" >
  
-    <fieldset>
-        <label>Result: </label>
+    <fieldset className="header">
+
+
+        <h1> Result:</h1> 
         <input name="password" value={password} readOnly/>
-        <button>Generate Password</button>
+        <button className="createAccount">Generate Password</button>
     </fieldset>
 
     <fieldset>
